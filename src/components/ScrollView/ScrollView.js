@@ -25,7 +25,7 @@ class ScrollView extends Component {
     return (
       <div className="ScrollView">
         {this.state.data.map(dataEl => {
-            return <Job title={dataEl.title} org={dataEl.company}/>
+            return <Job title={dataEl.title} url={dataEl.url} org={dataEl.company}/>
         })}
       </div>
     );

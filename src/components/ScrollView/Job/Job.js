@@ -17,7 +17,12 @@ class Job extends Component {
       <div className="Job">
         <h1>{this.props.title}</h1>
         <h2>{this.props.org}</h2>
-        {this.props.description}
+        <p>{this.props.description}</p>
+        <a className="Link" target="_blank" href={this.props.url }>
+          <div className="link">
+            View On Github
+          </div>
+        </a>
       </div>
     );
   }
