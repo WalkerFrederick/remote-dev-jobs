@@ -8,7 +8,7 @@ class Header extends Component {
       <div className="Header">
         <h1>Remote Dev Jobs</h1>
         <p>These are all the jobs labled as Remote via the github Jobs api</p>
-        <SearchBar/>
+        <SearchBar callback={this.props.callback}/>
       </div>
     );
   }

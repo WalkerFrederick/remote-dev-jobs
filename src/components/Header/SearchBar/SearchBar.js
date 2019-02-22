@@ -20,7 +20,7 @@ class SearchBar extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log('SUBMITTED')
+    this.props.callback(this.state.search);
   }
 
   render() {

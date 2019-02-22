@@ -14,18 +14,29 @@ class App extends Component {
       data: [],
     }
 
-}
+  }
 
   componentWillMount() {
     fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=&location=remote')
     .then(res => res.json())
     .then(data => this.setState({data: data,}))
-}
+  }
+
+  componentWillUpdate() {
+    
+  }
+
+  getSearch(term) {
+    this.setState({data: [],})
+    fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description='+ term + '&location=remote')
+    .then(res => res.json())
+    .then(data => this.setState({data: data,}))
+  }
 
   render() {
     return (
       <div className="App">
-        <Header/>
+        <Header callback={this.getSearch.bind(this)}/>
         <ScrollView jobs={this.state.data} />
       </div>
     );
