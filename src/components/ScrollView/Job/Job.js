@@ -15,6 +15,7 @@ class Job extends Component {
   render() {
     return (
       <div className="Job">
+        <h3>Posted {this.props.days}</h3>
         <h1>{this.props.title}</h1>
         <h2>{this.props.org}</h2>
         <p>{this.props.description}</p>

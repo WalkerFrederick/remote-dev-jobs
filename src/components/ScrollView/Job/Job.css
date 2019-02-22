@@ -16,6 +16,12 @@
     font-size: .8rem;
     font-weight: 200;
 }
+.Job h3 {
+    color: lightblue;
+    text-align: left;
+    margin: 0;
+    font-size: .8rem;
+}
 .Job a {
     text-decoration: none;
     font-weight: 200;

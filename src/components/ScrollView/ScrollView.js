@@ -15,17 +15,24 @@ class ScrollView extends Component {
     }
 
 
-    componentWillMount() {
-        fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=&location=remote')
-        .then(res => res.json())
-        .then(data => this.setState({data: data,}))
+    componentWillUpdate() {
+        if(this.state.data !== this.props.jobs) {
+            this.setState({
+                data: this.props.jobs,
+            })
+        }
+    }
+
+    computeDaysSince() {
+
+        return '2 days ago'
     }
 
   render() {
     return (
       <div className="ScrollView">
         {this.state.data.map(dataEl => {
-            return <Job title={dataEl.title} url={dataEl.url} org={dataEl.company}/>
+            return <Job title={dataEl.title} url={dataEl.url} org={dataEl.company} days={this.computeDaysSince(dataEl.created_at)}/>
         })}
       </div>
     );
