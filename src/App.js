@@ -22,10 +22,6 @@ class App extends Component {
     .then(data => this.setState({data: data,}))
   }
 
-  componentWillUpdate() {
-    
-  }
-
   getSearch(term) {
     this.setState({data: [],})
     fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description='+ term + '&location=remote')

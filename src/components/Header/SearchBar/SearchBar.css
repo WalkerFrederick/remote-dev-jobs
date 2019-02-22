@@ -1,3 +1,11 @@
-input {
+input, .submit {
     padding: 10px;
+    border: none;
+
+}
+.submit {
+    background: #f3f3f3;
+}
+.submit:hover {
+    background: #e4e4e4;
 }

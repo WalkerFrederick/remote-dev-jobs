@@ -28,7 +28,7 @@ class SearchBar extends Component {
       <div className="SearchBar">
         <form onSubmit={this.onSubmit.bind(this)}>
           <input type="text" name='search' onChange={this.onChange.bind(this)} value={this.state.search}></input>
-          <input type="submit" name="submit" onSubmit={this.onSubmit.bind(this)}></input>
+          <button class={'submit'} type="submit" name="submit" onSubmit={this.onSubmit.bind(this)}>Search</button>
         </form>
       </div>
     );
