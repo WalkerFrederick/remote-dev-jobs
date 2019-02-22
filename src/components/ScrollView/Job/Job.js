@@ -20,7 +20,7 @@ class Job extends Component {
         <p>{this.props.description}</p>
         <a className="Link" target="_blank" href={this.props.url }>
           <div className="link">
-            View On Github
+            View Source
           </div>
         </a>
       </div>
