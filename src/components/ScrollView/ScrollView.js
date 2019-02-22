@@ -32,7 +32,7 @@ class ScrollView extends Component {
     return (
       <div className="ScrollView">
         {this.state.data.map(dataEl => {
-            return <Job title={dataEl.title} url={dataEl.url} org={dataEl.company} days={this.computeDaysSince(dataEl.created_at)}/>
+            return <Job key={dataEl.id} title={dataEl.title} url={dataEl.url} org={dataEl.company} days={this.computeDaysSince(dataEl.created_at)}/>
         })}
       </div>
     );

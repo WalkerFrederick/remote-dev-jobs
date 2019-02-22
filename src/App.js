@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import ScrollView from './components/ScrollView/ScrollView';
+import {provider, connect} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import { fetchJobs } from './Actions/postActions';
 
 import './App.css';
+
+const store = createStore(() => [], {}, applyMiddleware());
 
 class App extends Component {
 
